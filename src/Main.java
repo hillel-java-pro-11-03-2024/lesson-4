@@ -29,8 +29,7 @@ public class Main {
 
   private static void processPlayer(Player player, List<Obstacle> obstacleList, int index) {
     if (index > obstacleList.size()-1) {
-      System.out.println();
-      System.out.println(player.getName() + " FINISH COMPETITION!");
+      System.out.println("\n" + player.getName() + " FINISH COMPETITION!");
       return;
     }
     Obstacle obstacle = obstacleList.get(index);
@@ -41,7 +40,6 @@ public class Main {
       } else {
         System.out.println("X");
         System.out.println(player.getName() + " LOOSING COMPETITION");
-        return;
       }
     }
     else if (obstacle instanceof TreadMill treadMill) {
@@ -50,7 +48,6 @@ public class Main {
       } else {
         System.out.println("X");
         System.out.println(player.getName() + " LOOSING COMPETITION");
-        return;
       }
     }
 
